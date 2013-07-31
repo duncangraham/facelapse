@@ -3,9 +3,9 @@
 </head>
 
 <body>
-  {{> hello}}
+  {{#if currentUser}}
+      {{> signedIn}}
+  {{else}}
+      {{> notSignedIn}}
+  {{/if}}
 </body>
-
-<template name="hello">
-  {{loginButtons}}
-</template>
