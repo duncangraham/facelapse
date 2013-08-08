@@ -1,9 +1,24 @@
 <template name="signedIn">
   {{loginButtons}}
-  <div id="video-container">
-    <video id="camera-stream" width="200" autoplay></video>
-    <button>Snap</button>
-    <canvas id="snapshot" width="200" height="100"></canvas>
-    <img src="">
+  <p>
+    Starting Location (lat, lon):<br/>
+    <span id="startLat">???</span>°, <span id="startLon">???</span>°
+  </p>
+
+  <div class="example">
+	<input type="file" id="files1" name="image" accept="image/*" capture>
+	<output id="file_list"></output>
   </div>
+
+
+<!--
+  <div id="video-container">
+    <div style="text-align:center;">
+	<video id="screenshot-stream" class="videostream screen_size" autoplay=""></video>
+	<img id="screenshot" class="screen_size" src="">
+	<canvas id="screenshot-canvas" style="display:none;"></canvas>
+	<p><button id="screenshot-button">Capture</button> <button id="screenshot-stop-button">Stop</button></p>
+	</div>
+  </div>
+-->
 </template>
